@@ -5,6 +5,12 @@ export const designers = [
   {
     "id": "steven-feng",
     "name": "Ruixi (Steven) Feng",
+    "localizedNames": {
+      "zh-Hans": "冯睿熙",
+      "zh-Hant": "馮睿熙",
+      "ja": "馮睿熙",
+      "ko": "펑루이시"
+    },
     "roleKey": "founderDesigner",
     "portrait": "assets/people/steven-ruixi-feng.jpg",
     "biography": {}
@@ -12,6 +18,12 @@ export const designers = [
   {
     "id": "chengyan-tan",
     "name": "Chengyan Tan",
+    "localizedNames": {
+      "zh-Hans": "谭承言",
+      "zh-Hant": "譚承言",
+      "ja": "譚承言",
+      "ko": "탄청옌"
+    },
     "roleKey": "cofounderDesigner",
     "portrait": null,
     "biography": {}
