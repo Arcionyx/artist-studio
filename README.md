@@ -4,11 +4,12 @@ ARCSEON is an art-led product company bringing artistic expression, product desi
 
 ## Pages
 
-Home, Design, Shop, Company, Journal, Contact. The legacy studio.html route forwards to company.html. The first product is a sleep-support product; exact specifications, photos, price, release date and checkout are intentionally pending product information. The portfolio visuals are original concept studies, clearly identified as such. Journal entries and the company statement are preview copy.
+Home, Design, Shop, Company, Designers, Journal, Contact. The legacy studio.html route forwards to company.html. The first product is a sleep-support product; exact specifications, photos, price, release date and checkout are intentionally pending product information. The portfolio visuals are original concept studies, clearly identified as such. Journal entries and the company statement are preview copy.
 
 ## Features
 
 - English by default; Simplified Chinese, Traditional Chinese, Japanese and Korean. Language choice persists in the browser.
+- A Designers page and company-page introductions for Steven (Ruixi) Feng, Founder & Designer, and Chengyan Tan, Co-founder & Designer. Steven's supplied original portrait is included; Chengyan's image area is blank and both biographies are pending.
 - A three-chapter pinned homepage with scroll-directed camera movement, a 5.8-second autonomous slideshow, masked line reveals and animated poster fallbacks.
 - Continuous 3D orbit, eased study crossfades, rotating light, scroll zoom, surface/structure modes and keyboard/drag interaction.
 - A horizontal visual-study gallery, image parallax, full-screen keyboard-accessible navigation and page transitions.
@@ -27,7 +28,7 @@ Run `npm run check` for locale completeness, page shells and local module refere
 
 ## Edit content
 
-- `dist/assets/content.js`: company identity, future contact email and all five language dictionaries.
+- `dist/assets/content.js`: company identity, designer profiles, future contact email and all five language dictionaries. Add portraits and localized biographies to the exported `designers` array when supplied.
 - `dist/assets/app.js`: page content and interactions.
 - `dist/assets/scene.js`: original parametric 3D studies.
 - `dist/assets/direction.js`: visual-direction copy in all five languages.

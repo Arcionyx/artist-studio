@@ -1,6 +1,22 @@
 // ARCSEON art-led company identity and five-language product copy.
 export const studio = {name:'ARCSEON',suffix:'',email:'',productUrl:'',provisional:false};
 export const languages = [["en","English"],["zh-Hans","简体中文"],["zh-Hant","繁體中文"],["ja","日本語"],["ko","한국어"]];
+export const designers = [
+  {
+    "id": "steven-feng",
+    "name": "Steven (Ruixi) Feng",
+    "roleKey": "founderDesigner",
+    "portrait": "assets/people/steven-ruixi-feng.jpg",
+    "biography": {}
+  },
+  {
+    "id": "chengyan-tan",
+    "name": "Chengyan Tan",
+    "roleKey": "cofounderDesigner",
+    "portrait": null,
+    "biography": {}
+  }
+];
 export const copy = {
   "en": {
     "nav": [
@@ -8,6 +24,7 @@ export const copy = {
       "Design",
       "Shop",
       "Company",
+      "Designers",
       "Journal",
       "Contact"
     ],
@@ -182,7 +199,16 @@ export const copy = {
     "productFocus": "DESIGNED AROUND REST",
     "homeJournal": "A look behind<br>the objects.",
     "studioLink": "Our approach",
-    "ready": "An art-led product company, taking shape."
+    "ready": "An art-led product company, taking shape.",
+    "designersTitle": "The people<br>behind the objects.",
+    "designersDesc": "Meet the founders and designers behind ARCSEON.",
+    "designersLink": "Meet the designers",
+    "designerPortraitPending": "Portrait coming soon",
+    "designerBioPending": "Biography coming soon.",
+    "founderDesigner": "Founder & Designer",
+    "cofounderDesigner": "Co-founder & Designer",
+    "designerPortrait": "Portrait",
+    "designersSectionTitle": "The people<br>shaping ARCSEON."
   },
   "zh-Hans": {
     "nav": [
@@ -190,6 +216,7 @@ export const copy = {
       "产品设计",
       "商品",
       "公司",
+      "设计师",
       "品牌日志",
       "联系"
     ],
@@ -364,7 +391,16 @@ export const copy = {
     "productFocus": "围绕休憩的设计",
     "homeJournal": "走近器物<br>背后的故事。",
     "studioLink": "了解我们的方式",
-    "ready": "一家艺术产品公司，正在成形。"
+    "ready": "一家艺术产品公司，正在成形。",
+    "designersTitle": "器物背后，<br>是创作的人。",
+    "designersDesc": "认识 ARCSEON 的创始人与设计师。",
+    "designersLink": "认识设计师",
+    "designerPortraitPending": "人物照片待补充",
+    "designerBioPending": "人物介绍待补充。",
+    "founderDesigner": "创始人兼设计师",
+    "cofounderDesigner": "联合创始人兼设计师",
+    "designerPortrait": "人物照片",
+    "designersSectionTitle": "共同塑造<br>ARCSEON 的人。"
   },
   "zh-Hant": {
     "nav": [
@@ -372,6 +408,7 @@ export const copy = {
       "產品設計",
       "商品",
       "公司",
+      "設計師",
       "品牌日誌",
       "聯絡"
     ],
@@ -546,7 +583,16 @@ export const copy = {
     "productFocus": "圍繞休憩的設計",
     "homeJournal": "走近器物<br>背後的故事。",
     "studioLink": "瞭解我們的方式",
-    "ready": "一家藝術產品公司，正在成形。"
+    "ready": "一家藝術產品公司，正在成形。",
+    "designersTitle": "器物背後，<br>是創作的人。",
+    "designersDesc": "認識 ARCSEON 的創始人與設計師。",
+    "designersLink": "認識設計師",
+    "designerPortraitPending": "人物照片待補充",
+    "designerBioPending": "人物介紹待補充。",
+    "founderDesigner": "創始人兼設計師",
+    "cofounderDesigner": "聯合創始人兼設計師",
+    "designerPortrait": "人物照片",
+    "designersSectionTitle": "共同塑造<br>ARCSEON 的人。"
   },
   "ja": {
     "nav": [
@@ -554,6 +600,7 @@ export const copy = {
       "デザイン",
       "ショップ",
       "会社について",
+      "デザイナー",
       "ジャーナル",
       "お問い合わせ"
     ],
@@ -728,7 +775,16 @@ export const copy = {
     "productFocus": "休息のためのデザイン",
     "homeJournal": "ものづくりの<br>背景に触れる。",
     "studioLink": "私たちのアプローチ",
-    "ready": "アートを軸にした企業が、かたちになっています。"
+    "ready": "アートを軸にした企業が、かたちになっています。",
+    "designersTitle": "ものの向こうに、<br>つくり手がいる。",
+    "designersDesc": "ARCSEONの創業者とデザイナーをご紹介します。",
+    "designersLink": "デザイナーを知る",
+    "designerPortraitPending": "ポートレートは後日公開",
+    "designerBioPending": "プロフィールは後日公開します。",
+    "founderDesigner": "創業者・デザイナー",
+    "cofounderDesigner": "共同創業者・デザイナー",
+    "designerPortrait": "ポートレート",
+    "designersSectionTitle": "ARCSEONを<br>かたちづくる人々。"
   },
   "ko": {
     "nav": [
@@ -736,6 +792,7 @@ export const copy = {
       "디자인",
       "숍",
       "회사 소개",
+      "디자이너",
       "저널",
       "문의"
     ],
@@ -910,6 +967,15 @@ export const copy = {
     "productFocus": "휴식을 위한 디자인",
     "homeJournal": "사물 뒤에 있는<br>이야기 속으로.",
     "studioLink": "우리의 접근",
-    "ready": "새로운 예술 제품 기업이 형태를 갖춰 갑니다."
+    "ready": "새로운 예술 제품 기업이 형태를 갖춰 갑니다.",
+    "designersTitle": "사물 뒤에는<br>만드는 사람이 있습니다.",
+    "designersDesc": "ARCSEON의 창립자와 디자이너를 소개합니다.",
+    "designersLink": "디자이너 소개",
+    "designerPortraitPending": "인물 사진 공개 예정",
+    "designerBioPending": "상세 소개는 추후 공개됩니다.",
+    "founderDesigner": "창립자 겸 디자이너",
+    "cofounderDesigner": "공동 창립자 겸 디자이너",
+    "designerPortrait": "인물 사진",
+    "designersSectionTitle": "ARCSEON을<br>만들어 가는 사람들."
   }
 };

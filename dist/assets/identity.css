@@ -82,3 +82,32 @@
 @media(max-width:1100px){.brand-lettering>.arcseon-wordmark{width:135px}.brand .arcseon-mark{width:35px;height:29px}}
 @media(max-width:600px){.brand{gap:9px}.brand .arcseon-mark{width:29px;height:24px}.brand-lettering>.arcseon-wordmark{width:111px}.brand-lettering>small{font-size:4.8px;letter-spacing:.2em}.footer-mini-brand>.arcseon-mark{width:24px}.footer-mini-lettering>.arcseon-wordmark{width:104px}}
 @media(max-width:360px){.brand-lettering>.arcseon-wordmark{width:98px}.brand .arcseon-mark{width:26px;height:22px}.brand{gap:7px}}
+
+/* People: generous, balanced portrait space and a quiet pending-image area. */
+.desktop-nav{gap:clamp(14px,1.3vw,23px);white-space:nowrap}
+.designers-section{padding-top:clamp(60px,7vw,110px);padding-bottom:clamp(90px,10vw,160px)}
+.designers-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(38px,7vw,112px);max-width:1160px;margin:0 auto;align-items:start}
+.designer-card{min-width:0;scroll-margin-top:36px}
+.designer-portrait{position:relative;aspect-ratio:3/4;overflow:hidden;background:#e9e8df}
+.designer-portrait>img{width:100%;height:100%;object-fit:contain;object-position:center;background:#f1f1f3}
+.designer-portrait.is-placeholder{border:1px solid var(--line);background:#eeede5}
+.portrait-pending{position:absolute;left:25px;bottom:24px;color:var(--muted);font-size:9px;line-height:1.7;letter-spacing:.06em}
+.designer-identity{padding-top:30px}
+.designer-identity h2{font-family:var(--sans);font-size:clamp(25px,2.5vw,37px);line-height:1.25;letter-spacing:-.045em;overflow-wrap:anywhere}
+.designer-role{margin-top:12px;font-size:11px;line-height:1.7;color:var(--ink);letter-spacing:.025em}
+.designer-bio{margin-top:25px;font-size:13px;line-height:1.9;max-width:43ch}
+.designer-bio.is-pending{font-size:10px;color:var(--muted)}
+.company-people{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start;gap:8%;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#eeede5}
+.company-people-intro>.eyebrow{color:var(--muted);font-size:9px}
+.company-people-intro h2{font-size:clamp(36px,4.1vw,64px);line-height:1.12;margin:30px 0}
+.company-people-intro .text-link{font-size:11px}
+.company-person{display:grid;grid-template-columns:30px minmax(0,1fr) 25px;align-items:center;gap:18px;padding:34px 0;border-top:1px solid var(--line)}
+.company-person:last-child{border-bottom:1px solid var(--line)}
+.company-person .person-number{font-size:9px;color:var(--muted);align-self:start;padding-top:5px}
+.company-person h3{font-family:var(--sans);font-size:clamp(21px,2vw,29px);line-height:1.3;letter-spacing:-.04em;overflow-wrap:anywhere}
+.company-person p{font-size:10px;margin-top:12px;line-height:1.8}
+.company-person>span:last-child{font-size:25px;transition:transform .3s}
+.company-person:hover>span:last-child{transform:translate(3px,-3px)}
+@media(max-width:1100px){.desktop-nav{display:none}.designers-grid{gap:7vw}.company-people{gap:6%}.company-person{gap:12px;grid-template-columns:22px minmax(0,1fr) 22px}}
+@media(max-width:700px){.designers-grid{grid-template-columns:minmax(0,1fr);gap:65px;max-width:480px}.designer-identity{padding-top:25px}.designer-identity h2{font-size:28px}.designer-role{font-size:10px;margin-top:10px}.designer-bio{margin-top:20px}.portrait-pending{left:20px;bottom:20px;font-size:8px}.company-people{grid-template-columns:minmax(0,1fr);gap:45px}.company-people-intro h2{font-size:40px;margin:25px 0}.company-person{padding:29px 0}.company-person h3{font-size:23px}.company-person p{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.company-person>span:last-child{transition:none}.company-person:hover>span:last-child{transform:none}}
