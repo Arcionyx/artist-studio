@@ -1,0 +1,50 @@
+/* Steven Studio: original chamfered lettering, fluid ST geometry and clear space. */
+.steven-wordmark{display:block;width:100%;height:auto;overflow:visible;color:var(--ink)}
+.brand{gap:16px}
+.brand .steven-mark{width:44px;height:32px;flex-shrink:0;transform:none}
+.brand:hover .steven-mark{transform:translateX(2px)}
+.brand>.brand-lettering{display:flex;flex-direction:column;gap:8px;line-height:1;font-size:inherit;letter-spacing:0}
+.brand-lettering>.steven-wordmark{width:137px;height:auto}
+.brand-lettering>small{font:500 6px/1 var(--sans);letter-spacing:.55em;text-transform:uppercase;margin:0;padding-left:1px}
+/* A measured brand signature replaces the former edge-to-edge text block. */
+.footer-engineered{padding:clamp(85px,8vw,145px) var(--gutter) 24px;background:#eeede4}
+.footer-engineered .footer-top{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,.55fr);gap:11%;max-width:1200px;margin:0 auto;padding-bottom:100px;align-items:start}
+.footer-engineered .footer-top h2{font-size:clamp(40px,4.8vw,77px);line-height:1.14;letter-spacing:-.05em;margin:31px 0 35px;max-width:15ch}
+.footer-engineered .footer-top .eyebrow{font-size:8px;letter-spacing:.17em;color:#7f8476}
+.footer-engineered .footer-top .button{font-size:11px;min-height:44px;gap:58px}
+.footer-side-note{align-self:end;padding-bottom:9px}
+.footer-edition{display:block;font:500 9px/1.5 var(--sans);letter-spacing:.21em;color:#a37a52;margin-bottom:26px}
+.footer-side-note p{font-size:11px;line-height:2;max-width:22ch;color:#818675}
+.footer-brand-stage{position:relative;display:flex;align-items:center;justify-content:center;min-height:490px;padding:100px 7% 115px;border-top:1px solid #cfd2c4;border-bottom:1px solid #cfd2c4;max-width:1400px;margin:auto;isolation:isolate;overflow:hidden}
+.brand-signature{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;width:min(100%,760px);padding:15px 0 5px}
+.signature-mark{display:block;margin-bottom:49px}
+.signature-mark>.steven-mark{display:block;width:100px;height:auto;color:#343a30;transform:none}
+.brand-signature>.steven-wordmark{width:100%;height:auto;color:#343a30}
+.signature-caption{font:500 10px/1 var(--sans);letter-spacing:.74em;padding-left:.74em;color:#6f7868;margin-top:34px}
+.stage-index,.stage-datum{position:absolute;z-index:2;font:400 8px/1 var(--sans);letter-spacing:.14em;color:#9a9f90;pointer-events:none}
+.stage-index{left:0;top:30px}
+.stage-datum{right:0;bottom:31px}
+.signature-field{position:absolute;z-index:0;right:-11%;bottom:-27%;width:67%;height:auto;color:#9a8b73;opacity:.11;transform:rotate(-17deg);pointer-events:none;transition:opacity 1s ease}
+.footer-brand-stage:hover .signature-field{opacity:.19}
+.footer-engineered .footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:40px;padding:40px 0;border:0;max-width:1400px;margin:auto}
+.footer-engineered .footer-bottom nav{display:flex;flex-wrap:wrap;gap:38px;font-size:10px;letter-spacing:.04em}
+.footer-engineered .top-button{width:33px;height:33px;font-size:18px;flex-shrink:0}
+.footer-engineered .legal{display:flex;justify-content:space-between;align-items:center;gap:25px;border-top:1px solid #cfd2c4;margin:0 auto;padding-top:22px;max-width:1400px;font-size:8px;line-height:1.8}
+/* Smaller hero type and generous masks protect descenders, dots and animated overhang. */
+.hero-copy{width:72%;padding-right:var(--gutter)}
+.hero h1{font-size:clamp(70px,8.3vw,140px);line-height:1.13;letter-spacing:-.065em;max-width:none;width:100%}
+.hero h1 .title-line{padding:.13em .14em .27em .055em;margin:-.13em -.14em -.27em -.055em;overflow:hidden}
+.hero h1 .title-line>span{animation-name:title-clear-arrive;max-width:100%;overflow:visible}
+.hero-description{margin-top:32px}
+[data-lang^=zh] .hero h1{font-size:clamp(58px,6.5vw,106px);line-height:1.24;letter-spacing:-.05em}
+[data-lang=ja] .hero h1{font-size:clamp(53px,5.9vw,95px);line-height:1.25;letter-spacing:-.05em}
+[data-lang=ko] .hero h1{font-size:clamp(55px,6.2vw,102px);line-height:1.25;letter-spacing:-.05em}
+@keyframes title-clear-arrive{from{transform:translateY(108%) rotate(1.2deg);opacity:.4}to{transform:translateY(0) rotate(0);opacity:1}}
+@media(min-width:1600px){.hero h1{font-size:142px}.hero-copy{padding-right:6vw}.footer-brand-stage{min-height:550px}.brand-signature{width:800px}}
+@media(max-width:1100px){.brand{gap:13px}.brand-lettering>.steven-wordmark{width:124px}.brand .steven-mark{width:41px;height:30px}.hero h1{font-size:8.8vw}.footer-engineered .footer-top{gap:9%;padding-bottom:85px}.footer-engineered .footer-top h2{font-size:53px}.footer-brand-stage{min-height:450px;padding-top:90px;padding-bottom:100px}.brand-signature{width:min(100%,680px)}.signature-mark{margin-bottom:44px}.signature-mark>.steven-mark{width:90px}.footer-engineered .footer-bottom nav{gap:29px}}
+@media(max-width:850px){.hero h1{font-size:9.2vw}.hero-copy{width:76%}.footer-engineered .footer-top{grid-template-columns:minmax(0,1fr) 170px;gap:35px;padding-bottom:75px}.footer-engineered .footer-top h2{font-size:45px}.footer-side-note p{font-size:10px}.footer-brand-stage{min-height:410px;padding:85px 7% 95px}.brand-signature{width:min(100%,580px)}.signature-mark>.steven-mark{width:85px}.signature-caption{font-size:9px;margin-top:31px}.footer-engineered .footer-bottom nav{gap:24px;font-size:9px}.signature-field{width:90%;right:-27%;bottom:-5%}}
+@media(max-width:600px){.brand{gap:11px}.brand .steven-mark{width:34px;height:25px}.brand-lettering>.steven-wordmark{width:103px}.brand>.brand-lettering{gap:6px}.brand-lettering>small{font-size:5px;letter-spacing:.48em}.header-tools{gap:7px}.language-picker select{max-width:74px}.hero-copy{width:100%;padding-right:var(--gutter)}.hero h1{font-size:clamp(45px,13.2vw,73px);line-height:1.13;letter-spacing:-.06em}.hero h1 .title-line{padding:.14em .14em .28em .055em;margin:-.14em -.14em -.28em -.055em}.hero-description{margin-top:22px}.footer-engineered{padding-top:75px;padding-bottom:24px}.footer-engineered .footer-top{display:block;padding-bottom:65px}.footer-engineered .footer-top .eyebrow{font-size:7px;letter-spacing:.13em;max-width:29ch}.footer-engineered .footer-top h2{font-size:39px;line-height:1.18;letter-spacing:-.045em;margin:27px 0 30px;max-width:14ch}.footer-engineered .footer-top .button{font-size:10px;gap:48px;min-height:41px}.footer-side-note{display:none}.footer-brand-stage{min-height:355px;padding:77px 9% 85px;overflow:hidden}.brand-signature{width:100%;padding:8px 0}.signature-mark{margin-bottom:41px}.signature-mark>.steven-mark{width:77px}.signature-caption{font-size:7px;letter-spacing:.7em;padding-left:.7em;margin-top:27px}.stage-index,.stage-datum{font-size:6px;letter-spacing:.12em}.stage-index{top:24px}.stage-datum{bottom:25px}.signature-field{width:145%;right:-69%;bottom:4%;opacity:.09}.footer-engineered .footer-bottom{padding:31px 0;gap:18px;align-items:flex-start}.footer-engineered .footer-bottom nav{display:grid;grid-template-columns:repeat(3,auto);column-gap:30px;row-gap:20px;font-size:9px;line-height:1.5}.footer-engineered .top-button{width:29px;height:29px;font-size:16px}.footer-engineered .legal{flex-direction:column;align-items:flex-start;gap:6px;font-size:7px;line-height:1.8;padding-top:20px}[data-lang^=zh] .hero h1{font-size:clamp(39px,10.9vw,61px);line-height:1.26}[data-lang=ja] .hero h1{font-size:clamp(36px,10.3vw,58px);line-height:1.27}[data-lang=ko] .hero h1{font-size:clamp(38px,10.5vw,61px);line-height:1.27}[data-lang^=zh] .footer-engineered .footer-top h2,[data-lang=ja] .footer-engineered .footer-top h2,[data-lang=ko] .footer-engineered .footer-top h2{font-size:34px;line-height:1.3;letter-spacing:-.04em}}
+@media(max-width:360px){.brand-lettering>.steven-wordmark{width:91px}.brand .steven-mark{width:30px;height:23px}.brand{gap:8px}.header-tools{gap:4px}.language-picker{gap:3px}.language-picker select{max-width:67px;font-size:8px}.footer-engineered .footer-bottom nav{column-gap:20px}}
+@media(max-height:740px) and (min-width:601px){.hero h1{font-size:7.4vw}.hero-description{margin-top:20px}}
+@media(max-height:740px) and (max-width:600px){.hero h1{font-size:12.9vw}.hero-description{margin-top:17px}}
+@media(prefers-reduced-motion:reduce){.hero h1 .title-line>span{animation:none!important;transform:none!important;opacity:1!important}.signature-field,.brand .steven-mark{transition:none}.brand:hover .steven-mark{transform:none}}
