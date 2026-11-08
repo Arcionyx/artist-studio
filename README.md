@@ -1,10 +1,10 @@
-# Artist Studio
+# ARCSEON
 
-Steven Studio is a warm, responsive artist-led product design website, revised around fluid sculptural geometry, warm-white space and precise editorial typography. The working name **Steven Studio** is provisional.
+ARCSEON is an art-led product company bringing artistic expression, product design and everyday experience together. The website preserves its sculptural visual direction and begins with a sleep-support product.
 
 ## Pages
 
-Home, Design, Shop, Studio, Journal, Contact. The first product is a sleep-support product; exact specifications, photos, price, release date and checkout are intentionally pending the artist’s information. The portfolio visuals are original concept studies, clearly identified as such. Journal entries and the studio statement are preview copy.
+Home, Design, Shop, Company, Journal, Contact. The legacy studio.html route forwards to company.html. The first product is a sleep-support product; exact specifications, photos, price, release date and checkout are intentionally pending product information. The portfolio visuals are original concept studies, clearly identified as such. Journal entries and the company statement are preview copy.
 
 ## Features
 
@@ -13,7 +13,7 @@ Home, Design, Shop, Studio, Journal, Contact. The first product is a sleep-suppo
 - Continuous 3D orbit, eased study crossfades, rotating light, scroll zoom, surface/structure modes and keyboard/drag interaction.
 - A horizontal visual-study gallery, image parallax, full-screen keyboard-accessible navigation and page transitions.
 - Reduced-motion settings remove pinning and autonomous animation while keeping the entire site usable.
-- An original fluid ST symbol and custom chamfered STEVEN lettering, with positive letter spacing, a matching favicon and a compact contact footer.
+- An original open-arc A emblem and custom ARCSEON lettering, with positive letter spacing, a matching favicon and a compact contact footer.
 - Smaller responsive hero titles with padded reveal masks to protect full letterforms and descenders.
 - Original continuous folded-surface sculptures in local Three.js, with drag and keyboard rotation, surface/structure modes, view reset, subtle scroll response, lighting and shadows. Ray-traced JPEG studies provide a fallback without WebGL.
 - Reduced-motion support, responsive layouts, keyboard-accessible navigation, image dialogs and product accordions.
@@ -27,7 +27,7 @@ Run `npm run check` for locale completeness, page shells and local module refere
 
 ## Edit content
 
-- `dist/assets/content.js`: working name, future contact email and all five language dictionaries.
+- `dist/assets/content.js`: company identity, future contact email and all five language dictionaries.
 - `dist/assets/app.js`: page content and interactions.
 - `dist/assets/scene.js`: original parametric 3D studies.
 - `dist/assets/direction.js`: visual-direction copy in all five languages.
@@ -35,12 +35,11 @@ Run `npm run check` for locale completeness, page shells and local module refere
 - `design-source/render-studies.py`: reproducible Blender source for the original material studies.
 - `dist/assets/style.css`: baseline layout and responsive styling.
 - `dist/assets/motion.css` and `dist/assets/motion.js`: kinetic layout and scroll chapters.
-- `dist/assets/steven-symbol.svg`, `steven-wordmark.svg` and `steven-studio-lockup.svg`: editable vector brand artwork.
+- `dist/assets/arcseon-symbol.svg`, `arcseon-wordmark.svg` and `arcseon-lockup.svg`: editable vector brand artwork.
 - `dist/assets/identity.css` and `identity.js`: shared brand components, compact contact-footer composition and safe hero typography.
 - `design-source/build-identity.py`: reproducible original vector artwork.
-- `design-source/steven-tech-identity-concept.png`: the technology-focused identity concept.
 
-To activate commerce, supply product details and connect an actual purchase destination. Add a real studio email or a contact service before enabling message sending.
+To activate commerce, supply product details and connect an actual purchase destination. Add a real company email or a contact service before enabling message sending.
 
 ## Design references
 
@@ -54,6 +53,6 @@ The current ZHA website at https://www.zha.com/ was also reviewed for its image-
 
 ## Current preview
 
-https://steven-studio.steven0574.chatgpt.site
+https://arcseon.steven0574.chatgpt.site
 
 The footer uses a small brand mark, contact-page link and a localized contact-details-pending message until public contact information is provided.
