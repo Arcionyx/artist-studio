@@ -4,7 +4,7 @@ export const languages = [["en","English"],["zh-Hans","简体中文"],["zh-Hant"
 export const designers = [
   {
     "id": "steven-feng",
-    "name": "Steven (Ruixi) Feng",
+    "name": "Ruixi (Steven) Feng",
     "roleKey": "founderDesigner",
     "portrait": "assets/people/steven-ruixi-feng.jpg",
     "biography": {}
