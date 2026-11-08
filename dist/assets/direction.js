@@ -1,0 +1,8 @@
+// A new visual direction. All sculptures are original concept studies.
+export const direction={
+ en:{titles:['Everyday,<br>reimagined.','Made to move<br>you. Gently.','Ideas, given<br>dimension.'],eyebrows:['ARTIST-LED PRODUCT DESIGN','FORM, FUNCTION, FEELING','AN OPEN STUDIO'],study:'FORM EXPLORATION',scroll:'Scroll to discover',surface:'Surface',structure:'Structure',principles:['A sense of form.','A reason to exist.','A space to feel.'],studio:'An independent design practice',label:'Objects, thoughtfully imagined.',reset:'Reset sculpture view'},
+ 'zh-Hans':{titles:['重新想象，<br>日常之物。','轻轻地，<br>触动你。','让想法，<br>拥有维度。'],eyebrows:['艺术家主导的产品设计','形态、功能与感受','一间开放的工作室'],study:'形态探索',scroll:'向下探索',surface:'曲面',structure:'结构',principles:['感知形态。','赋予意义。','留出感受的空间。'],studio:'独立的产品设计实践',label:'用心想象，日常之物。',reset:'重置立体视角'},
+ 'zh-Hant':{titles:['重新想像，<br>日常之物。','輕輕地，<br>觸動你。','讓想法，<br>擁有維度。'],eyebrows:['藝術家主導的產品設計','形態、功能與感受','一間開放的工作室'],study:'形態探索',scroll:'向下探索',surface:'曲面',structure:'結構',principles:['感知形態。','賦予意義。','留出感受的空間。'],studio:'獨立的產品設計實踐',label:'用心想像，日常之物。',reset:'重設立體視角'},
+ ja:{titles:['日常を、<br>想いなおす。','そっと、<br>心を動かす。','アイデアに、<br>奥行きを。'],eyebrows:['アーティストによるプロダクトデザイン','かたち、機能、感覚','ひらかれたスタジオ'],study:'かたちの探求',scroll:'スクロールして探索',surface:'曲面',structure:'構造',principles:['かたちを感じる。','存在に意味を。','感じるための余白。'],studio:'独立したデザインの実践',label:'想いを込めた、日常のもの。',reset:'視点をリセット'},
+ ko:{titles:['일상을 새롭게<br>상상하다.','조용히,<br>마음을 움직이다.','생각에<br>차원을 더하다.'],eyebrows:['아티스트 중심의 제품 디자인','형태, 기능, 감각','열린 스튜디오'],study:'형태 탐구',scroll:'스크롤하여 탐색',surface:'표면',structure:'구조',principles:['형태를 느끼다.','존재에 의미를.','감각을 위한 여백.'],studio:'독립적인 디자인 실천',label:'마음을 담아 상상한 일상의 사물.',reset:'시점 초기화'}
+};
