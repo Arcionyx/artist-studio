@@ -1,0 +1,10 @@
+{
+  "name": "artist-studio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A warm, multilingual artist studio website",
+  "scripts": {
+    "check": "node scripts/check.mjs"
+  },
+  "type": "module"
+}
