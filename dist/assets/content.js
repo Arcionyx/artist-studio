@@ -1,5 +1,5 @@
 // All public copy lives here. Replace the provisional name and launch details when ready.
-export const studio = { name: 'Stillroom', suffix: 'STUDIO', email: '', productUrl: '', provisional: true };
+export const studio = { name: 'Steven', suffix: 'Studio', email: '', productUrl: '', provisional: true };
 export const languages = [['en','English'],['zh-Hans','简体中文'],['zh-Hant','繁體中文'],['ja','日本語'],['ko','한국어']];
 export const copy = {
  en: {

@@ -52,7 +52,7 @@ function buildStudy(variant, material) {
 export function mountScene(container, options={}) {
  let renderer;
  try { renderer = new THREE.WebGLRenderer({alpha:true,antialias:true,powerPreference:'low-power'}); }
- catch { return ()=>{}; }
+ catch { container.parentElement.classList.add('scene-unavailable');container.removeAttribute('tabindex');container.setAttribute('aria-label',options.label||'Conceptual visual');return ()=>{}; }
  const reducedQuery = matchMedia('(prefers-reduced-motion: reduce)');
  renderer.setPixelRatio(Math.min(devicePixelRatio, 1.6));
  renderer.setClearColor(0x000000,0);
@@ -77,40 +77,56 @@ export function mountScene(container, options={}) {
  studies.forEach((g,i)=>{g.visible=i===(options.slide||0);root.add(g)});
  const floor = new THREE.Mesh(new THREE.PlaneGeometry(100,100),new THREE.ShadowMaterial({opacity:.105}));
  floor.rotation.x=-Math.PI/2;floor.position.y=-1.62;floor.receiveShadow=true;scene.add(floor);
- let stopped=false,paused=!!options.reduced,inViewport=true,dragging=false,userX=0,userY=0,targetX=0,targetY=0,dragX=0,dragY=0,needsRender=true,frame=0,last=0,progress=0,mode='surface';
+ let stopped=false,paused=!!options.reduced,inViewport=true,dragging=false,userX=0,userY=0,targetX=0,targetY=0,dragX=0,dragY=0,needsRender=true,frame=0,last=0,progress=0,mode='surface',phase=0,baseScale=1;
+ let weights=studies.map((_,i)=>i===(options.slide||0)?1:0),fromWeights=weights.slice(),targetSlide=options.slide||0,transitionStart=-2000;
  function size(){
   const {width,height}=container.getBoundingClientRect();if(!width||!height)return;
   renderer.setSize(width,height,false);const ratio=width/height;
   const halfHeight=ratio<.9?3.3:2.75;
   camera.left=-halfHeight*ratio;camera.right=halfHeight*ratio;camera.top=halfHeight;camera.bottom=-halfHeight;
-  camera.updateProjectionMatrix();root.scale.setScalar(ratio<.75?.85:1);root.position.x=ratio<.9?0:.55;needsRender=true;
+  camera.updateProjectionMatrix();baseScale=ratio<.75?.82:1;root.scale.setScalar(baseScale);root.position.x=ratio<.9?0:.55;needsRender=true;
  }
  const resize = new ResizeObserver(size);resize.observe(container);size();
  const down=e=>{if(e.pointerType==='mouse'&&e.button!==0)return;dragging=true;dragX=e.clientX;dragY=e.clientY;if(e.pointerType==='mouse')container.setPointerCapture(e.pointerId)};
  const move=e=>{if(dragging){userY+=(e.clientX-dragX)*.006;userX+=(e.clientY-dragY)*.004;userX=Math.max(-.65,Math.min(.65,userX));dragX=e.clientX;dragY=e.clientY;needsRender=true}else if(e.pointerType==='mouse'&&!reducedQuery.matches){const r=container.getBoundingClientRect();targetY=((e.clientX-r.left)/r.width-.5)*.16;targetX=((e.clientY-r.top)/r.height-.5)*.08;needsRender=true}};
  const up=()=>{dragging=false};const leave=()=>{targetX=0;targetY=0;needsRender=true};
  const keyboard=e=>{if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home'].includes(e.key))return;e.preventDefault();e.stopPropagation();if(e.key==='Home'){userX=0;userY=0}else if(e.key==='ArrowLeft')userY-=.12;else if(e.key==='ArrowRight')userY+=.12;else if(e.key==='ArrowUp')userX-=.1;else userX+=.1;needsRender=true};
- const changeSlide=e=>{studies.forEach((g,i)=>g.visible=i===e.detail);userX=0;userY=0;needsRender=true};
+ const changeSlide=e=>{fromWeights=weights.slice();targetSlide=e.detail;transitionStart=performance.now();userX=0;userY=0;needsRender=true};
  const changeMotion=e=>{paused=e.detail;needsRender=true};
- const changeView=e=>{mode=e.detail;studies.forEach(g=>{g.userData.contours.visible=mode==='structure';g.userData.surface.material.opacity=mode==='structure'?.07:1;g.userData.surface.castShadow=mode!=='structure'});needsRender=true};
+ const changeView=e=>{mode=e.detail;studies.forEach(g=>g.userData.contours.visible=mode==='structure');needsRender=true};
  const reset=()=>{userX=0;userY=0;targetX=0;targetY=0;needsRender=true};
- const scroll=()=>{const r=container.parentElement.getBoundingClientRect();progress=Math.max(0,Math.min(1,-r.top/r.height));needsRender=true};
+ const scroll=e=>{progress=e.detail;needsRender=true};
  const visibility=()=>{needsRender=true};
- const listenerList=[[container,'pointerdown',down],[container,'pointermove',move],[container,'pointerup',up],[container,'pointercancel',up],[container,'pointerleave',leave],[container,'keydown',keyboard],[window,'pointerup',up],[window,'stillroom-slide',changeSlide],[window,'stillroom-motion',changeMotion],[window,'stillroom-view',changeView],[window,'stillroom-reset',reset],[window,'scroll',scroll],[document,'visibilitychange',visibility]];
+ const listenerList=[[container,'pointerdown',down],[container,'pointermove',move],[container,'pointerup',up],[container,'pointercancel',up],[container,'pointerleave',leave],[container,'keydown',keyboard],[window,'pointerup',up],[window,'stillroom-slide',changeSlide],[window,'stillroom-motion',changeMotion],[window,'stillroom-view',changeView],[window,'stillroom-reset',reset],[window,'steven-scroll',scroll],[document,'visibilitychange',visibility]];
  listenerList.forEach(([target,event,fn])=>target.addEventListener(event,fn,event==='scroll'?{passive:true}:undefined));
  const observer=new IntersectionObserver(([e])=>{inViewport=e.isIntersecting;needsRender=true},{threshold:0});observer.observe(container);
  function draw(time){
   if(stopped)return;frame=requestAnimationFrame(draw);
   const moving=!paused&&!reducedQuery.matches&&inViewport&&!document.hidden;
-  if(!inViewport||document.hidden||(!moving&&!needsRender)||time-last<33)return;
-  last=time;const seconds=time*.001;
-  root.rotation.y=userY+targetY+(moving?Math.sin(seconds*.2)*.11+progress*.23:0);
-  root.rotation.x=userX+targetX+(moving?progress*.09:0);
-  root.position.y=moving?Math.sin(seconds*.6)*.055:0;
+  const transition= Math.max(0,Math.min(1,(time-transitionStart)/(reducedQuery.matches?1:1150)));
+  if(!inViewport||document.hidden||(!moving&&!needsRender&&transition>=1)||time-last<33)return;
+  const delta=last?Math.min(.1,(time-last)/1000):0;last=time;
+  if(moving)phase+=delta;
+  const ease=1-Math.pow(1-transition,3);
+  studies.forEach((g,i)=>{
+   const target=i===targetSlide?1:0;weights[i]=fromWeights[i]+(target-fromWeights[i])*ease;
+   g.visible=weights[i]>.002;
+   g.userData.surface.material.opacity=weights[i]*(mode==='structure'?.07:1);
+   g.userData.surface.castShadow=weights[i]>.4&&mode!=='structure';
+   g.traverse(o=>{if(o.isLine)o.material.opacity=weights[i]*(g.userData.contours.children.includes(o)?.72:.45)});
+   g.scale.setScalar(.8+.2*weights[i]);
+  });
+  const scrollMotion=reducedQuery.matches?0:progress;
+  root.rotation.y=userY+targetY+phase*.17+Math.sin(phase*.42)*.2+scrollMotion*2.65;
+  root.rotation.x=userX+targetX+Math.sin(phase*.65)*.17+scrollMotion*.36;
+  root.rotation.z=Math.sin(phase*.35)*.075-scrollMotion*.13;
+  root.position.y=Math.sin(phase*1.05)*.15+scrollMotion*.18;
+  root.scale.setScalar(baseScale*(1+scrollMotion*.25+Math.sin(phase*.5)*.035));
+  key.position.x=-4+Math.sin(phase*.35)*2.5;
   renderer.render(scene,camera);needsRender=false;container.parentElement.classList.add('scene-ready');
  }
  draw(0);
- const contextLost=e=>{e.preventDefault();container.parentElement.classList.remove('scene-ready');stopped=true;cancelAnimationFrame(frame)};
+ const contextLost=e=>{e.preventDefault();container.parentElement.classList.remove('scene-ready');container.parentElement.classList.add('scene-unavailable');container.removeAttribute('tabindex');container.setAttribute('aria-label',options.label||'Conceptual visual');stopped=true;cancelAnimationFrame(frame)};
  renderer.domElement.addEventListener('webglcontextlost',contextLost);
  return()=>{stopped=true;cancelAnimationFrame(frame);resize.disconnect();observer.disconnect();listenerList.forEach(([target,event,fn])=>target.removeEventListener(event,fn));scene.traverse(o=>{o.geometry?.dispose();if(o.material){const ms=Array.isArray(o.material)?o.material:[o.material];ms.forEach(m=>m.dispose())}});renderer.dispose();renderer.domElement.remove()};
 }
