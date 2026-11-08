@@ -48,3 +48,26 @@
 @media(max-height:740px) and (min-width:601px){.hero h1{font-size:7.4vw}.hero-description{margin-top:20px}}
 @media(max-height:740px) and (max-width:600px){.hero h1{font-size:12.9vw}.hero-description{margin-top:17px}}
 @media(prefers-reduced-motion:reduce){.hero h1 .title-line>span{animation:none!important;transform:none!important;opacity:1!important}.signature-field,.brand .steven-mark{transition:none}.brand:hover .steven-mark{transform:none}}
+/* Compact contact footer: a small identity, one contact entry and essential links. */
+.footer.footer-compact{padding:38px var(--gutter) 23px;background:#eeede4}
+.footer-contact-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(190px,auto) 30px;align-items:center;gap:52px;max-width:1400px;margin:0 auto;padding-bottom:28px;border-bottom:1px solid #cfd2c4}
+.footer-mini-brand{display:flex;align-items:center;gap:11px;width:max-content;max-width:100%}
+.footer-mini-brand>.steven-mark{display:block;width:31px;height:auto;color:var(--ink);flex-shrink:0}
+.footer-mini-lettering{display:flex;flex-direction:column;gap:6px}
+.footer-mini-lettering>.steven-wordmark{display:block;width:108px;height:auto}
+.footer-mini-lettering>small{font:500 5px/1 var(--sans);letter-spacing:.5em;color:#6f7868}
+.footer-contact-info{display:flex;flex-direction:column;align-items:flex-start;gap:7px}
+.footer-contact-label{font:500 8px/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#858c7b}
+.footer-contact-link{display:inline-flex;align-items:center;gap:27px;font-size:11px;line-height:1.6}
+.footer-contact-link>span{font-size:17px;line-height:1;transition:transform .3s}
+.footer-contact-link:hover{color:var(--rust)}
+.footer-contact-link:hover>span{transform:translate(3px,-2px)}
+.footer-contact-info>p{font-size:9px;line-height:1.6;color:#8a8f81;max-width:none}
+.footer-compact .top-button{width:29px;height:29px;font-size:17px;align-self:center}
+.footer-meta{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:25px;padding-top:21px}
+.footer-meta nav{display:flex;flex-wrap:wrap;gap:23px;font-size:9px;line-height:1.7;color:#606955}
+.footer-meta nav a:hover{color:var(--rust)}
+.footer-meta>span{font-size:8px;line-height:1.8;color:#909686;text-align:right}
+@media(max-width:850px){.footer-contact-row{gap:30px}.footer-meta{align-items:flex-start}.footer-meta nav{gap:18px}.footer-meta>span{max-width:27ch}}
+@media(max-width:600px){.footer.footer-compact{padding-top:30px;padding-bottom:22px}.footer-contact-row{grid-template-columns:minmax(0,1fr) 27px;align-items:start;gap:23px 20px;padding-bottom:25px}.footer-mini-brand{grid-column:1;grid-row:1;gap:9px}.footer-mini-brand>.steven-mark{width:27px}.footer-mini-lettering>.steven-wordmark{width:95px}.footer-mini-lettering{gap:5px}.footer-mini-lettering>small{font-size:4.5px}.footer-contact-info{grid-column:1;grid-row:2;gap:6px}.footer-contact-label{font-size:7px}.footer-contact-link{font-size:10px;gap:24px}.footer-contact-info>p{font-size:8px}.footer-compact .top-button{grid-column:2;grid-row:1;width:27px;height:27px;font-size:15px}.footer-meta{display:flex;flex-direction:column;gap:18px;padding-top:22px;align-items:flex-start}.footer-meta nav{column-gap:23px;row-gap:12px;font-size:8px}.footer-meta>span{font-size:7px;max-width:none;text-align:left}}
+@media(prefers-reduced-motion:reduce){.footer-contact-link>span{transition:none}.footer-contact-link:hover>span{transform:none}}

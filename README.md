@@ -13,7 +13,7 @@ Home, Design, Shop, Studio, Journal, Contact. The first product is a sleep-suppo
 - Continuous 3D orbit, eased study crossfades, rotating light, scroll zoom, surface/structure modes and keyboard/drag interaction.
 - A horizontal visual-study gallery, image parallax, full-screen keyboard-accessible navigation and page transitions.
 - Reduced-motion settings remove pinning and autonomous animation while keeping the entire site usable.
-- An original fluid ST symbol and custom chamfered STEVEN lettering, with positive letter spacing, a generous footer clear-space zone and a matching favicon.
+- An original fluid ST symbol and custom chamfered STEVEN lettering, with positive letter spacing, a matching favicon and a compact contact footer.
 - Smaller responsive hero titles with padded reveal masks to protect full letterforms and descenders.
 - Original continuous folded-surface sculptures in local Three.js, with drag and keyboard rotation, surface/structure modes, view reset, subtle scroll response, lighting and shadows. Ray-traced JPEG studies provide a fallback without WebGL.
 - Reduced-motion support, responsive layouts, keyboard-accessible navigation, image dialogs and product accordions.
@@ -36,7 +36,7 @@ Run `npm run check` for locale completeness, page shells and local module refere
 - `dist/assets/style.css`: baseline layout and responsive styling.
 - `dist/assets/motion.css` and `dist/assets/motion.js`: kinetic layout and scroll chapters.
 - `dist/assets/steven-symbol.svg`, `steven-wordmark.svg` and `steven-studio-lockup.svg`: editable vector brand artwork.
-- `dist/assets/identity.css` and `identity.js`: shared brand components, footer composition and safe hero typography.
+- `dist/assets/identity.css` and `identity.js`: shared brand components, compact contact-footer composition and safe hero typography.
 - `design-source/build-identity.py`: reproducible original vector artwork.
 - `design-source/steven-tech-identity-concept.png`: the technology-focused identity concept.
 
@@ -55,3 +55,5 @@ The current ZHA website at https://www.zha.com/ was also reviewed for its image-
 ## Current preview
 
 https://steven-studio.steven0574.chatgpt.site
+
+The footer uses a small brand mark, contact-page link and a localized contact-details-pending message until public contact information is provided.
