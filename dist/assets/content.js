@@ -47,6 +47,22 @@ export const designers = [
     "portraitHeight": 1448,
     "portraitScale": 1.22,
     "biography": {}
+  },
+  {
+    "id": "jiahao-shan",
+    "name": "Jiahao Shan",
+    "localizedNames": {
+      "zh-Hans": "单佳好",
+      "zh-Hant": "單佳好",
+      "ja": "単佳好",
+      "ko": "산자하오"
+    },
+    "roleKey": "designerRole",
+    "portrait": "assets/people/jiahao-shan.jpg",
+    "portraitWidth": 1122,
+    "portraitHeight": 1402,
+    "portraitScale": 1.32,
+    "biography": {}
   }
 ];
 export const copy = {
