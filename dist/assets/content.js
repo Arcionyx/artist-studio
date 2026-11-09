@@ -31,6 +31,22 @@ export const designers = [
     "portraitWidth": 1024,
     "portraitHeight": 1536,
     "biography": {}
+  },
+  {
+    "id": "ruohao-he",
+    "name": "Ruohao He",
+    "localizedNames": {
+      "zh-Hans": "贺若皓",
+      "zh-Hant": "賀若皓",
+      "ja": "賀若皓",
+      "ko": "허뤄하오"
+    },
+    "roleKey": "designerRole",
+    "portrait": "assets/people/ruohao-he.jpg",
+    "portraitWidth": 1086,
+    "portraitHeight": 1448,
+    "portraitScale": 1.22,
+    "biography": {}
   }
 ];
 export const copy = {
@@ -223,6 +239,7 @@ export const copy = {
     "designerBioPending": "Biography coming soon.",
     "founderDesigner": "Founder & Designer",
     "cofounderDesigner": "Co-founder & Designer",
+    "designerRole": "Designer",
     "designerPortrait": "Portrait",
     "designersSectionTitle": "The people<br>shaping ARCSEON."
   },
@@ -415,6 +432,7 @@ export const copy = {
     "designerBioPending": "人物介绍待补充。",
     "founderDesigner": "创始人兼设计师",
     "cofounderDesigner": "联合创始人兼设计师",
+    "designerRole": "设计师",
     "designerPortrait": "人物照片",
     "designersSectionTitle": "共同塑造<br>ARCSEON 的人。"
   },
@@ -607,6 +625,7 @@ export const copy = {
     "designerBioPending": "人物介紹待補充。",
     "founderDesigner": "創始人兼設計師",
     "cofounderDesigner": "聯合創始人兼設計師",
+    "designerRole": "設計師",
     "designerPortrait": "人物照片",
     "designersSectionTitle": "共同塑造<br>ARCSEON 的人。"
   },
@@ -799,6 +818,7 @@ export const copy = {
     "designerBioPending": "プロフィールは後日公開します。",
     "founderDesigner": "創業者・デザイナー",
     "cofounderDesigner": "共同創業者・デザイナー",
+    "designerRole": "デザイナー",
     "designerPortrait": "ポートレート",
     "designersSectionTitle": "ARCSEONを<br>かたちづくる人々。"
   },
@@ -991,6 +1011,7 @@ export const copy = {
     "designerBioPending": "상세 소개는 추후 공개됩니다.",
     "founderDesigner": "창립자 겸 디자이너",
     "cofounderDesigner": "공동 창립자 겸 디자이너",
+    "designerRole": "디자이너",
     "designerPortrait": "인물 사진",
     "designersSectionTitle": "ARCSEON을<br>만들어 가는 사람들."
   }
