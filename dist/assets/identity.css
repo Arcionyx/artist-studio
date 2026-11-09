@@ -86,16 +86,16 @@
 /* People: generous, balanced portrait space and a quiet pending-image area. */
 .desktop-nav{gap:clamp(14px,1.3vw,23px);white-space:nowrap}
 .designers-section{padding-top:clamp(60px,7vw,110px);padding-bottom:clamp(90px,10vw,160px)}
-.designers-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(38px,7vw,112px);max-width:1160px;margin:0 auto;align-items:start}
+.designers-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:72px clamp(24px,3vw,48px);max-width:1520px;margin:0 auto;align-items:start}
 .designer-card{min-width:0;scroll-margin-top:36px}
 .designer-portrait{position:relative;aspect-ratio:3/4;overflow:hidden;background:#e9e8df}
 .designer-portrait>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 15%;background:#f1f1f3;transform:scale(var(--portrait-scale,1));transform-origin:50% 15%}
 .designer-portrait.is-placeholder{border:1px solid var(--line);background:#eeede5}
 .portrait-pending{position:absolute;left:25px;bottom:24px;color:var(--muted);font-size:9px;line-height:1.7;letter-spacing:.06em}
-.designer-identity{padding-top:30px}
-.designer-identity h2{font-family:var(--sans);font-size:clamp(25px,2.5vw,37px);line-height:1.25;letter-spacing:-.045em;overflow-wrap:anywhere}
-.designer-role{margin-top:12px;font-size:11px;line-height:1.7;color:var(--ink);letter-spacing:.025em}
-.designer-bio{margin-top:25px;font-size:13px;line-height:1.9;max-width:43ch}
+.designer-identity{padding-top:22px}
+.designer-identity h2{font-family:var(--sans);font-size:clamp(20px,1.7vw,26px);line-height:1.3;letter-spacing:-.035em;overflow-wrap:break-word}
+.designer-role{margin-top:9px;font-size:10px;line-height:1.7;color:var(--ink);letter-spacing:.025em}
+.designer-bio{margin-top:18px;font-size:12px;line-height:1.9;max-width:43ch}
 .designer-bio.is-pending{font-size:10px;color:var(--muted)}
 .company-people{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start;gap:8%;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#eeede5}
 .company-people-intro>.eyebrow{color:var(--muted);font-size:9px}
@@ -108,6 +108,9 @@
 .company-person p{font-size:10px;margin-top:12px;line-height:1.8}
 .company-person>span:last-child{font-size:25px;transition:transform .3s}
 .company-person:hover>span:last-child{transform:translate(3px,-3px)}
-@media(max-width:1100px){.desktop-nav{display:none}.designers-grid{gap:7vw}.company-people{gap:6%}.company-person{gap:12px;grid-template-columns:22px minmax(0,1fr) 22px}}
-@media(max-width:700px){.designers-grid{grid-template-columns:minmax(0,1fr);gap:65px;max-width:480px}.designer-identity{padding-top:25px}.designer-identity h2{font-size:28px}.designer-role{font-size:10px;margin-top:10px}.designer-bio{margin-top:20px}.portrait-pending{left:20px;bottom:20px;font-size:8px}.company-people{grid-template-columns:minmax(0,1fr);gap:45px}.company-people-intro h2{font-size:40px;margin:25px 0}.company-person{padding:29px 0}.company-person h3{font-size:23px}.company-person p{font-size:9px}}
+@media(max-width:1279px){.designers-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1100px){.desktop-nav{display:none}.company-people{gap:6%}.company-person{gap:12px;grid-template-columns:22px minmax(0,1fr) 22px}}
+@media(max-width:960px){.designers-grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(24px,4vw,40px)}}
+@media(max-width:700px){.designer-identity{padding-top:20px}.designer-identity h2{font-size:22px}.designer-role{margin-top:10px}.designer-bio{margin-top:20px}.portrait-pending{left:20px;bottom:20px;font-size:8px}.company-people{grid-template-columns:minmax(0,1fr);gap:45px}.company-people-intro h2{font-size:40px;margin:25px 0}.company-person{padding:29px 0}.company-person h3{font-size:23px}.company-person p{font-size:9px}}
+@media(max-width:560px){.designers-grid{grid-template-columns:minmax(0,1fr);gap:54px;max-width:340px}.designer-identity h2{font-size:24px}}
 @media(prefers-reduced-motion:reduce){.company-person>span:last-child{transition:none}.company-person:hover>span:last-child{transform:none}}
