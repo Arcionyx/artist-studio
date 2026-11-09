@@ -13,6 +13,8 @@ export const designers = [
     },
     "roleKey": "founderDesigner",
     "portrait": "assets/people/steven-ruixi-feng.jpg",
+    "portraitWidth": 814,
+    "portraitHeight": 1086,
     "biography": {}
   },
   {
@@ -25,7 +27,9 @@ export const designers = [
       "ko": "탄청옌"
     },
     "roleKey": "cofounderDesigner",
-    "portrait": null,
+    "portrait": "assets/people/chengyan-tan.jpg",
+    "portraitWidth": 1024,
+    "portraitHeight": 1536,
     "biography": {}
   }
 ];

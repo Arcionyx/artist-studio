@@ -9,7 +9,7 @@ Home, Design, Shop, Company, Designers, Journal, Contact. The legacy studio.html
 ## Features
 
 - English by default; Simplified Chinese, Traditional Chinese, Japanese and Korean. Language choice persists in the browser.
-- A Designers page and company-page introductions for Ruixi (Steven) Feng, Founder & Designer, and Chengyan Tan, Co-founder & Designer. Steven's supplied original portrait is included; Chengyan's image area is blank and both biographies are pending.
+- A Designers page and company-page introductions for Ruixi (Steven) Feng, Founder & Designer, and Chengyan Tan, Co-founder & Designer. Both supplied original portraits appear in equal-sized 3:4 frames, with proportional image fitting that preserves faces. Both biographies are pending.
 - Designer names follow the selected language across profiles, company introductions, portrait alt text and page descriptions. English names are preserved; Chinese names use simplified or traditional characters, Japanese uses corresponding kanji, and Korean uses Mandarin-based transliteration.
 - A three-chapter pinned homepage with scroll-directed camera movement, a 5.8-second autonomous slideshow, masked line reveals and animated poster fallbacks.
 - Continuous 3D orbit, eased study crossfades, rotating light, scroll zoom, surface/structure modes and keyboard/drag interaction.
