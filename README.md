@@ -56,13 +56,9 @@ The current ZHA website at https://www.zha.com/ was also reviewed for its image-
 
 ## GitHub Pages
 
-Target URL: https://arcionyx.github.io/artist-studio/
+Public website: https://arcionyx.github.io/artist-studio/
 
-The website is ready for GitHub Pages. The target URL becomes live after the repository owner completes the initial hosting settings:
-
-1. Set `Arcionyx/artist-studio` to **Public** in **Settings → General → Danger Zone → Change repository visibility**.
-2. Open **Settings → Pages**, and select **GitHub Actions** under **Build and deployment → Source**.
-3. Run **Deploy ARCSEON to GitHub Pages** from the Actions tab if the initial deployment has not started automatically.
+The website is live on GitHub Pages with HTTPS enabled. `Arcionyx/artist-studio` is **Public**, and **Settings → Pages → Build and deployment → Source** is set to **GitHub Actions**. To redeploy manually, run **Deploy ARCSEON to GitHub Pages** from the Actions tab.
 
 The workflow validates and uploads `dist/`, then deploys it with GitHub's official Pages actions. It runs on pushes to `main`, when the repository becomes public, and on manual dispatch. Private repositories run validation and artifact upload only. Future content changes on `main` deploy automatically once Pages is enabled.
 
