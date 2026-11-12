@@ -54,8 +54,18 @@ Three.js 0.180.0 is bundled locally under its MIT licence; see `dist/assets/THRE
 
 The current ZHA website at https://www.zha.com/ was also reviewed for its image-led project presentation and content structure. The implementation, monogram and animation system here are original. Browser inspection in this cloud environment was blocked by connection errors; animation control and navigation are checked through DOM and animation-graph fixtures.
 
-## Current preview
+## GitHub Pages
 
-https://arcseon.steven0574.chatgpt.site
+Target URL: https://arcionyx.github.io/artist-studio/
+
+The website is ready for GitHub Pages. The target URL becomes live after the repository owner completes the initial hosting settings:
+
+1. Set `Arcionyx/artist-studio` to **Public** in **Settings → General → Danger Zone → Change repository visibility**.
+2. Open **Settings → Pages**, and select **GitHub Actions** under **Build and deployment → Source**.
+3. Run **Deploy ARCSEON to GitHub Pages** from the Actions tab if the initial deployment has not started automatically.
+
+The workflow validates and uploads `dist/`, then deploys it with GitHub's official Pages actions. It runs on pushes to `main`, when the repository becomes public, and on manual dispatch. Private repositories run validation and artifact upload only. Future content changes on `main` deploy automatically once Pages is enabled.
+
+All page, image and module references are relative so they work under the `/artist-studio/` project path. Designers are available at `designers.html`. The original hosting manifest is retained for compatibility.
 
 The footer uses a small brand mark, contact-page link and a localized contact-details-pending message until public contact information is provided.
